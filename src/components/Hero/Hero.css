@@ -1,0 +1,27 @@
+.hero{
+    height: 100vh;
+       display: flex;
+}
+.hero-left{
+    
+    font-size: large;
+    ;
+}
+.hero-left-sale{
+    
+    background-color: #e1edff;
+    height: 60px;
+    width: 200px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-weight: 600;
+    padding-left: 24px;
+    font-size:x-large;
+
+}
+.hero-right{
+    background: linear-gradient(180deg, #eecbf0, #e1ffea22 60%);
+}
