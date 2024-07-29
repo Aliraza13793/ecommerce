@@ -2,6 +2,7 @@ import { Productss } from "@/utils/mocks"
 import ProductsCart from "@/components/ProductsCart"
 import Image,{ StaticImageData } from "next/image"
 import { Button } from "@/components/ui/button"
+import Quantity from "@/components/Quantity";
 
 
 const getProductsDetail=(id:number | string)=>{
@@ -24,7 +25,7 @@ export default function Page({ params }: { params: { id: string } }) {
               <div className="">
               <h1 className="text-2xl">{product.name}</h1> 
               <h2 className=" text-base font-semibold text-gray-400">{product.title}</h2>                    
-               {/* <Button className="mt-8"variant="outline">Add to Cart</Button> */}
+               
                
               <div>
                 <h3 className="mt-6 text-xs font-semibold">SLECT SIZE</h3>
@@ -32,8 +33,8 @@ export default function Page({ params }: { params: { id: string } }) {
                   sizes.map((item)=>{
 
                     return (
-                      <div key={item}className=" flex justify-center items-center w-6 h-6 duration-300 border rounded-full hover:shadow-xl mt-2">
-                  <span className="text-[10px] font-semibold text-center text-gray-600">{item}</span>
+                      <div key={item}className=" flex justify-center items-center w-10 h-10 duration-300 border rounded-full hover:bg-green-400 mt-2">
+                  <span className="text-1xl font-semibold text-center text-gray-600">{item}</span>
                 </div>
                 
                     )
@@ -41,8 +42,9 @@ export default function Page({ params }: { params: { id: string } }) {
                 }
                 </div>
                 <div className="flex gap-x-3 mt-6 items-center">
-                  <h3 className="text-[10px] font-semibold ">Quantity:</h3>
-                  <div>1</div>
+                  <h3 className="text-sm font-semibold ">Quantity:</h3>
+                  <Quantity/>
+                   <Button className="mt-8"variant="outline">Add to Cart</Button> 
                   </div>
               </div>
               

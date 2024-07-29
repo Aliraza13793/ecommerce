@@ -2,9 +2,7 @@
 import React from 'react'
 import Image,{StaticImageData} from 'next/image';
 import Link from 'next/link';
-import wtwehave1 from '../components/Assets/Images/wtwehave1.png';
-import wtwehave2 from '../components/Assets/Images/wtwehave2.png';
-import wtwehave3 from '../components/Assets/Images/wtwehave3.png';
+
 
 function ProductsCart(props:{title:string, price:number,img:StaticImageData,category:string, id:number}) {
   return (

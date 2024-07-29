@@ -1,9 +1,6 @@
 "use client"
 import React from 'react'
 import Image,{StaticImageData} from 'next/image';
-import wtwehave1 from '../components/Assets/Images/wtwehave1.png';
-import wtwehave2 from '../components/Assets/Images/wtwehave2.png';
-import wtwehave3 from '../components/Assets/Images/wtwehave3.png';
 import ProductsCart from './ProductsCart';
 import { Productss } from '@/utils/mocks';
 
