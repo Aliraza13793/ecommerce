@@ -44,8 +44,12 @@ export default function Page({ params }: { params: { id: string } }) {
                 <div className="flex gap-x-3 mt-6 items-center">
                   <h3 className="text-sm font-semibold ">Quantity:</h3>
                   <Quantity/>
-                   <Button className="mt-8"variant="outline">Add to Cart</Button> 
+                    
                   </div>
+                <div>
+                <Button className="mt-8"variant="outline">Add to Cart</Button>
+                  </div>
+
               </div>
               
               </div>
