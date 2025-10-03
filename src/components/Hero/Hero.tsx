@@ -14,34 +14,47 @@ import Link from 'next/link'
 
 function Hero() {
   return (
-    <div className='max-w-[1220px] px-4 md:px-6 mx-auto md:grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
-        <div className='col-span-1 flex flex-col justify-center px-4 md:px-0'>
-          <h1 className='text-green-400 font-bold my-2 md:my-3 text-xl md:text-2xl mt-6 md:mt-12'>
-            Sale Upto 70%
+    <div className='max-w-[1220px] px-4 md:px-6 mx-auto py-12 md:py-20'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center'>
+        <div className='flex flex-col justify-center items-center md:items-start text-center md:text-left'>
+          <span className='inline-block px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full text-sm font-semibold mb-6'>
+            Sale Up to 70% Off
+          </span>
+          <h1 className='font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-gray-900'>
+            An Industrial<br/>
+            Take on<br/>
+            Streetwear
           </h1>
-          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 md:mt-6'>
-          An Industrial
-          </h2>
-          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl'>
-          Take on
-          </h2>
-          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl'>
-          Streetwear
-          </h2>
-          <p className='text-gray-500 text-left md:text-center mt-4 md:mt-10 text-sm md:text-base'>Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
-          <button className='w-full sm:w-[50%] md:w-[40%] lg:w-[30%] bg-black text-white rounded p-3 md:p-5 mt-6 md:mt-10 mb-4 hover:bg-gray-800 transition-colors'><Link href="/AllProducts"> Start Shopping</Link></button>
-          <div className='flex justify-start gap-2 md:gap-0 flex-wrap'>
-            <Image src={Featured1} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
-            <Image src={Featured2} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
-            <Image src={Featured3} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
-            <Image src={Featured4} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
+          <p className='text-gray-600 mt-6 text-base md:text-lg max-w-md leading-relaxed'>
+            Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.
+          </p>
+          <Link href="/AllProducts">
+            <button className='mt-8 px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors shadow-sm hover:shadow-md'>
+              Start Shopping
+            </button>
+          </Link>
+          <div className='flex gap-4 flex-wrap justify-center md:justify-start mt-10'>
+            <div className='w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'>
+              <Image src={Featured1} width={80} height={80} alt='Brand 1' className='w-full h-full object-cover'/>
+            </div>
+            <div className='w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'>
+              <Image src={Featured2} width={80} height={80} alt='Brand 2' className='w-full h-full object-cover'/>
+            </div>
+            <div className='w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'>
+              <Image src={Featured3} width={80} height={80} alt='Brand 3' className='w-full h-full object-cover'/>
+            </div>
+            <div className='w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow'>
+              <Image src={Featured4} width={80} height={80} alt='Brand 4' className='w-full h-full object-cover'/>
+            </div>
           </div>
-
         </div>
-        <div className='col-span-1 w-full md:w-[90%] flex justify-center items-center text-center border rounded-full bg-pink-100 mt-8 md:mt-4 ml-0 md:ml-8 p-4 md:p-0'>
-            <Image src={header} width={1200} height={700} objectFit='cover' alt='Hero' className='rounded-full w-full h-auto' />
 
+        <div className='flex justify-center items-center'>
+          <div className='w-full max-w-[500px] aspect-square rounded-full bg-gradient-to-br from-pink-100 to-purple-100 p-6 md:p-8 flex items-center justify-center shadow-lg'>
+            <Image src={header} width={500} height={500} alt='Hero' className='rounded-full w-full h-full object-cover' />
+          </div>
         </div>
+      </div>
     </div>
   )
 }
