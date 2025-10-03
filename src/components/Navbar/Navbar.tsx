@@ -5,9 +5,11 @@ import Image from 'next/image'
 import shoppingbag from '../Assets/Images/shoppingbag.png'
 import strolly from '../Assets/Images/strolly.jpg'
 import Link from 'next/link'
+import { useCart } from '@/context/CartContext'
 
 function Navbar() {
   const [menu, setMenu]= useState("dinemarket")
+  const { getCartCount } = useCart()
   return (
     <div className='navbar'>
         <div className='nav-logo'>
@@ -23,7 +25,7 @@ function Navbar() {
         <div className='nav-searcbar'>
         <input type="search" placeholder='What are you looking for' className='bg-gray-600 hover:bg-red-300 active:bg-red-600 focus:outline-none focus:ring focus:ring-gray-300 rounded-full h-10 w-19 p-3' />
             <Link href='/cart'><Image  className='rounded-full' src={strolly} alt='' width={70} height={70}/></Link>
-            <div className='nav-cart-count'>0</div>
+            <div className='nav-cart-count'>{getCartCount()}</div>
         </div>
     </div>
   )

@@ -8,3 +8,14 @@ export type Product={
     image:string | StaticImageData;
     title:string;
 }
+
+export type CartItem = {
+    id: number;
+    name: string;
+    price: number;
+    image: string | StaticImageData;
+    size: string;
+    quantity: number;
+    category: string;
+    title: string;
+}
