@@ -14,33 +14,33 @@ import Link from 'next/link'
 
 function Hero() {
   return (
-    <div className='max-w-[1220px] p-2 mx-auto md:grid grid-cols-2'>
-        <div className=' col-span-1 flex flex-col justify-center'>
-          <h1 className='text-green-400 font-bold my-3 text-2xl mt-12'>
+    <div className='max-w-[1220px] px-4 md:px-6 mx-auto md:grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
+        <div className='col-span-1 flex flex-col justify-center px-4 md:px-0'>
+          <h1 className='text-green-400 font-bold my-2 md:my-3 text-xl md:text-2xl mt-6 md:mt-12'>
             Sale Upto 70%
           </h1>
-          <h2 className='my-2 text-justify font-bold text-6xl mt-6'>
-          An Industrial 
+          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-3 md:mt-6'>
+          An Industrial
           </h2>
-          <h2 className='my-2 text-justify font-bold text-6xl'>
+          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl'>
           Take on
           </h2>
-          <h2 className='my-2 text-justify font-bold text-6xl'>
+          <h2 className='my-1 md:my-2 text-left md:text-justify font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl'>
           Streetwear
           </h2>
-          <p className='flex flex-wrap text-gray-500 justify-center mt-10'>Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
-          <button className=' w-[30%] bg-black text-white rounded p-5 mt-10 mb-4 '><Link href="/AllProducts"> Start Shopping</Link></button>
-          <div className='flex justify-start'>
-            <Image src={Featured1} width={100} height={100} objectFit='cover' alt='brands ' className='mr-3 mt-3'/>
-            <Image src={Featured2} width={100} height={100} objectFit='cover' alt='brands'className='mr-3 mt-3'/>
-            <Image src={Featured3} width={100} height={100} objectFit='cover' alt='brands'className='mr-3 mt-3'/>
-            <Image src={Featured4} width={100} height={100} objectFit='cover' alt='brands'className='mr-3 mt-3'/>
-          </div>    
+          <p className='text-gray-500 text-left md:text-center mt-4 md:mt-10 text-sm md:text-base'>Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
+          <button className='w-full sm:w-[50%] md:w-[40%] lg:w-[30%] bg-black text-white rounded p-3 md:p-5 mt-6 md:mt-10 mb-4 hover:bg-gray-800 transition-colors'><Link href="/AllProducts"> Start Shopping</Link></button>
+          <div className='flex justify-start gap-2 md:gap-0 flex-wrap'>
+            <Image src={Featured1} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
+            <Image src={Featured2} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
+            <Image src={Featured3} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
+            <Image src={Featured4} width={100} height={100} objectFit='cover' alt='brands' className='w-16 h-16 md:w-24 md:h-24 mr-2 md:mr-3 mt-3'/>
+          </div>
 
         </div>
-        <div className=' col-span-1 md:w-[90%] flex text-center border rounded-full bg-pink-100 ml-8 mt-4'>
-            <Image src={header} width={1200} height={700} objectFit='cover' alt='Hero' className='rounded-full ml-4' />
-        
+        <div className='col-span-1 w-full md:w-[90%] flex justify-center items-center text-center border rounded-full bg-pink-100 mt-8 md:mt-4 ml-0 md:ml-8 p-4 md:p-0'>
+            <Image src={header} width={1200} height={700} objectFit='cover' alt='Hero' className='rounded-full w-full h-auto' />
+
         </div>
     </div>
   )

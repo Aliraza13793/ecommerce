@@ -33,52 +33,53 @@ export default function Page({ params }: { params: { id: string } }) {
    setTimeout(() => setAddedToCart(false), 2000);
  };
 
-    return <div className='flex flex-wrap ml-20 mt-16 py-10 '>
+    return <div className='max-w-[1220px] mx-auto px-4 md:px-6 mt-8 md:mt-16 py-6 md:py-10'>
 
         {
           result.map((product) => (
-            <div key={product.id} className="flex justify-between gap-4 ">
-              <div>
-                <Image src={product.image} alt={product.name} />
+            <div key={product.id} className="flex flex-col md:flex-row justify-between gap-6 md:gap-8">
+              <div className='w-full md:w-1/2 flex justify-center'>
+                <Image src={product.image} alt={product.name} className='w-full h-auto max-w-[500px] rounded-lg'/>
 
               </div>
 
-              <div className="">
-              <h1 className="text-2xl">{product.name}</h1>
-              <h2 className=" text-base font-semibold text-gray-400">{product.title}</h2>
+              <div className="w-full md:w-1/2">
+              <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">{product.name}</h1>
+              <h2 className="text-sm md:text-base font-semibold text-gray-400 mt-2">{product.title}</h2>
+              <p className="text-2xl md:text-3xl font-bold mt-4">${product.price}</p>
 
 
               <div>
-                <h3 className="mt-6 text-xs font-semibold">SELECT SIZE</h3>
-             <div className="flex gap-4">   {
+                <h3 className="mt-6 md:mt-8 text-xs md:text-sm font-semibold">SELECT SIZE</h3>
+             <div className="flex gap-2 md:gap-4 flex-wrap">   {
                   sizes.map((item)=>{
 
                     return (
                       <div
                         key={item}
                         onClick={() => setSelectedSize(item)}
-                        className={`flex justify-center items-center w-10 h-10 duration-300 border rounded-full hover:bg-green-400 mt-2 cursor-pointer ${
+                        className={`flex justify-center items-center w-10 h-10 md:w-12 md:h-12 duration-300 border rounded-full hover:bg-green-400 mt-2 cursor-pointer ${
                           selectedSize === item ? 'bg-green-400' : ''
                         }`}>
-                  <span className="text-1xl font-semibold text-center text-gray-600">{item}</span>
+                  <span className="text-sm md:text-base font-semibold text-center text-gray-600 uppercase">{item}</span>
                 </div>
 
                     )
                   })
                 }
                 </div>
-                <div className="flex gap-x-3 mt-6 items-center">
-                  <h3 className="text-sm font-semibold ">Quantity:</h3>
+                <div className="flex gap-x-3 mt-6 md:mt-8 items-center">
+                  <h3 className="text-sm md:text-base font-semibold">Quantity:</h3>
                   <div className='flex gap-x-2 items-center'>
                     <button
-                      className='border bg-green-400 h-8 w-8 rounded-full flex justify-center items-center'
+                      className='border bg-green-400 h-8 w-8 md:h-10 md:w-10 rounded-full flex justify-center items-center hover:bg-green-500 transition-colors'
                       onClick={() => setQuantity(quantity <= 1 ? 1 : quantity - 1)}
                     >
                       -
                     </button>
-                    <span>{quantity}</span>
+                    <span className='w-8 md:w-10 text-center font-semibold'>{quantity}</span>
                     <button
-                      className='border h-8 w-8  bg-green-400 rounded-full flex justify-center items-center'
+                      className='border h-8 w-8 md:h-10 md:w-10 bg-green-400 rounded-full flex justify-center items-center hover:bg-green-500 transition-colors'
                       onClick={() => setQuantity(quantity + 1)}
                     >
                       +
@@ -88,7 +89,7 @@ export default function Page({ params }: { params: { id: string } }) {
                   </div>
                 <div>
                 <Button
-                  className="mt-8"
+                  className="mt-6 md:mt-8 w-full md:w-auto px-8 py-3 text-base"
                   variant="outline"
                   onClick={() => handleAddToCart(product)}
                 >
